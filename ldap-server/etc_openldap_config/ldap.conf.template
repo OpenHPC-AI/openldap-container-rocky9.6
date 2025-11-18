@@ -27,5 +27,7 @@
 SASL_NOCANON    on
 
 
-BASE   dc=$base_secondary_dc,dc=$base_primary_dc
+BASE   dc=$BASE_SECONDARY_DC,dc=$BASE_PRIMARY_DC
+URI    ldap://$LDAP_SERVER_IP
+
 URI    ldap://$ldap_server_ip 
