@@ -1,45 +1,45 @@
-dn: dc=${base_secondary_dc},dc=${base_primary_dc}
+dn: dc=${BASE_SECONDARY_DC},dc=${BASE_PRIMARY_DC}
 objectClass: top
 objectClass: domain
-o: ${base_secondary_dc} ${base_primary_dc}
-dc: ${base_secondary_dc}
+o: ${BASE_SECONDARY_DC} ${BASE_PRIMARY_DC}
+dc: ${BASE_SECONDARY_DC}
 
-dn: dc=${base_subdomain_dc},dc=${base_secondary_dc},dc=${base_primary_dc}
+dn: dc=${BASE_SUBDOMAIN_DC},dc=${BASE_SECONDARY_DC},dc=${BASE_PRIMARY_DC}
 objectClass: top
 objectClass: dcObject
 objectClass: organization
-o: ${base_subdomain_dc} ${base_secondary_dc} ${base_primary_dc}
-dc: ${base_subdomain_dc}
+o: ${BASE_SUBDOMAIN_DC} ${BASE_SECONDARY_DC} ${BASE_PRIMARY_DC}
+dc: ${BASE_SUBDOMAIN_DC}
 
-dn: cn=${cn},dc=${base_secondary_dc},dc=${base_primary_dc}
+dn: cn=${CN},dc=${BASE_SECONDARY_DC},dc=${BASE_PRIMARY_DC}
 objectClass: organizationalRole
-cn: ${cn}
+cn: ${CN}
 description: Directory Manager
 
-dn: ou=${ou1},dc=${base_subdomain_dc},dc=${base_secondary_dc},dc=${base_primary_dc}
+dn: ou=${OU1},dc=${BASE_SUBDOMAIN_DC},dc=${BASE_SECONDARY_DC},dc=${BASE_PRIMARY_DC}
 objectClass: organizationalUnit
-ou: ${ou1}
+ou: ${OU1}
 
-dn: ou=${ou2},dc=${base_subdomain_dc},dc=${base_secondary_dc},dc=${base_primary_dc}
+dn: ou=${OU2},dc=${BASE_SUBDOMAIN_DC},dc=${BASE_SECONDARY_DC},dc=${BASE_PRIMARY_DC}
 objectClass: organizationalUnit
-ou: ${ou2}
+ou: ${OU2}
 
-dn: ou=${ou3},dc=${base_subdomain_dc},dc=${base_secondary_dc},dc=${base_primary_dc}
+dn: ou=${OU3},dc=${BASE_SUBDOMAIN_DC},dc=${BASE_SECONDARY_DC},dc=${BASE_PRIMARY_DC}
 objectClass: organizationalUnit
-ou: ${ou3}
+ou: ${OU3}
 
-dn: ou=${ou4},dc=${base_subdomain_dc},dc=${base_secondary_dc},dc=${base_primary_dc}
+dn: ou=${OU4},dc=${BASE_SUBDOMAIN_DC},dc=${BASE_SECONDARY_DC},dc=${BASE_PRIMARY_DC}
 objectClass: organizationalUnit
-ou: ${ou4}
+ou: ${OU4}
 
-dn: ou=${ou5},dc=${base_subdomain_dc},dc=${base_secondary_dc},dc=${base_primary_dc}
+dn: ou=${OU5},dc=${BASE_SUBDOMAIN_DC},dc=${BASE_SECONDARY_DC},dc=${BASE_PRIMARY_DC}
 objectClass: organizationalUnit
-ou: ${ou5}
+ou: ${OU5}
 
-dn: ou=${ou6},dc=${base_subdomain_dc},dc=${base_secondary_dc},dc=${base_primary_dc}
+dn: ou=${OU6},dc=${BASE_SUBDOMAIN_DC},dc=${BASE_SECONDARY_DC},dc=${BASE_PRIMARY_DC}
 objectClass: organizationalUnit
-ou: ${ou6}
+ou: ${OU6}
 
-dn: ou=${ou7},dc=${base_subdomain_dc},dc=${base_secondary_dc},dc=${base_primary_dc}
+dn: ou=${OU7},dc=${BASE_SUBDOMAIN_DC},dc=${BASE_SECONDARY_DC},dc=${BASE_PRIMARY_DC}
 objectClass: organizationalUnit
-ou: ${ou7}
+ou: ${OU7}
