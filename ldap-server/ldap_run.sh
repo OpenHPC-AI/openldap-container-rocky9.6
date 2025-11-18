@@ -5,7 +5,7 @@ set -xe
 ulimit -n 1024
 
 # Check if required environment variables are set
-required_vars=(LDAP_ROOT_PASSWD base_primary_dc base_secondary_dc base_subdomain_dc cn ou1 ou2 ou3 ou4 ou5 ou6 ou7 ldap_server_ip)
+required_vars=(LDAP_ROOT_PASSWD BASE_PRIMARY_DC BASE_SECONDARY_DC BASE_SUBDOMAIN_DC CN OU1 OU2 OU3 OU4 OU5 OU6 OU7 LDAP_SERVER_IP)
 
 for var in "${required_vars[@]}"; do
   if [ -z "${!var}" ]; then
@@ -65,7 +65,7 @@ if [ ! -f /etc/openldap/CONFIGURED ]; then
   ldapmodify -Y EXTERNAL -H ldapi:/// -f /ldap_config/chdomain.ldif|| { echo "Error: Failed to configure domain."; exit 1; }
 
   # Add basedomain entries
-  ldapadd -x -D "cn=${cn},dc=${base_secondary_dc},dc=${base_primary_dc}" \
+  ldapadd -x -D "cn=${CN},dc=${BASE_SECONDARY_DC},dc=${BASE_PRIMARY_DC}" \
     -w "${LDAP_ROOT_PASSWD}" -f /ldap_config/basedomain.ldif || \
     { echo "Error: Failed to add basedomain entries."; exit 1; }
 
